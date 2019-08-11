@@ -4,19 +4,19 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var mysql = require('mysql');
 
-var con = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'wyt920403',
-    database: 'ECOMMERCE'
-});
-
 // var con = mysql.createConnection({
-//     host: 'database-1.cs1o4f3tbdoq.us-east-1.rds.amazonaws.com',
-//     user: 'admin',
+//     host: 'localhost',
+//     user: 'root',
 //     password: 'wyt920403',
 //     database: 'ECOMMERCE'
 // });
+
+var con = mysql.createConnection({
+    host: 'database-1.cs1o4f3tbdoq.us-east-1.rds.amazonaws.com',
+    user: 'admin',
+    password: 'wyt920403',
+    database: 'ECOMMERCE'
+});
 
 var app = express();
 app.use(session({
